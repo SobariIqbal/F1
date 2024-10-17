@@ -1,8 +1,13 @@
-public class Mercedes extends Teams {
+public class Mercedes extends Team {
 
-    public Mercedes(Staff staf, Staff staf2){ 
-        super(staf);
+  
+
+
+    public Mercedes(Staff[] staff) { 
+        super(staff);
     }
+
+
 
 
 }

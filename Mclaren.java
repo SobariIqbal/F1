@@ -1,6 +1,6 @@
-public class Mclaren extends Teams {
+public class Mclaren extends Team {
 
-    public Mclaren(Staff staf){
+    public Mclaren(Staff[] staf){
         super(staf);
     }
 

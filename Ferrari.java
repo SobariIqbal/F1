@@ -1,7 +1,9 @@
-public class Ferrari extends Teams{
+public class Ferrari extends Team{
 
-    public Ferrari (Staff staf){
+    public Ferrari (Staff[] staf){
         super(staf);
     }
+
+ 
 
 }
