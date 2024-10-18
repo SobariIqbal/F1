@@ -1,11 +1,17 @@
 public class F1Race {
     
-    protected Team m = new Mercedes(new Staff[] {new Monteur(), new RaceEngineer()});	
+    Team m = new Mercedes(new Monteur(), new RaceEngineer(), new MercedesBenz(new soft()));
+    
+
+    
+    
 
 
     public void startRace() {
 
-        m.s[1].taak();
+        m.s.taak();
+        m.e.taak();
+        m.a.b.soooft();
 
        
         
