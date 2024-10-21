@@ -1,6 +1,6 @@
 public class Mclaren extends Team {
 
-    public Mclaren(Staff s, Staff e, Auto au) { 
-        super(s,e, au);
+    public Mclaren(Staff s, Staff e, Auto au, String tn) { 
+        super(s,e,au, tn);
     }
 }

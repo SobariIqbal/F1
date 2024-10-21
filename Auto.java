@@ -1,12 +1,15 @@
-public abstract class Auto {
+public abstract class Auto{
 
-    protected Band b = null;
+    protected Motoren b = null;
    
 
-    public Auto(Band ba){
+    public Auto(Motoren ba){
         b = ba;
         
     }
+
+    public abstract void snelheid();
+    
 
 
 
