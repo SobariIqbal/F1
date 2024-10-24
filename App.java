@@ -27,8 +27,22 @@ public class App {
 
         System.out.println("");
         F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam, team, auto, motor);
+
+        // F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam,new Mercedes(new Strateeg(), new Monteur(), new RaceEngineer(), new Coureur(), new MCL60(new Honda_RA620H()), teamnaam));
+
         player1.tegenstanders();
         player1.startRace();
+        player1.winnaarBerekenen();
         player1.verstuurbericht();
+
+
+
+
+        
+        myObj.close();
+        myObj2.close();
+        myObj3.close();
+        myObj4.close();
+        myObj5.close();
     }
 }
