@@ -1,6 +1,11 @@
 public class Monteur extends Staff {
-    public void taak(){
-        System.out.println("Monteur taak");
+    public int gebruik(){
+        return 0;
+    };
+
+    public void zetStrategie(Strategie s){
+     
+        
     };
 
 }

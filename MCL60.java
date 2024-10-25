@@ -21,13 +21,17 @@ public class MCL60 extends Auto {
             m.vertragen(auto, km_u, verschil);
             newkm_u = km_u;
         }else{
-            System.out.println("De snelheid is al " + km_u + " km/u");
+            System.out.println("De snelheid blijft " + km_u + " km/u");
         }
        
     }
 
     public String getAuto() {
         return auto;
+    }
+
+    public String getMotorType() {
+        return m.getMotorType();
     }
 
     

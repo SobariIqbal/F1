@@ -17,13 +17,17 @@ public class SF_24 extends Auto {
             newkm_u = km_u;
             m.vertragen(auto, km_u, verschil);
         }else{
-            System.out.println("De snelheid is al " + km_u + " km/u");
+            System.out.println("De snelheid blijft " + km_u + " km/u");
         }
        
     }
 
     public String getAuto() {
         return auto;
+    }
+
+    public String getMotorType() {
+        return m.getMotorType();
     }
 
 }

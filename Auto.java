@@ -20,6 +20,7 @@ public abstract class Auto{
     public abstract void snelheid(int km_u);
 
     public abstract String getAuto();
+    public abstract String getMotorType();
     
 
 

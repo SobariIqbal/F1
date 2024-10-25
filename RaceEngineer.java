@@ -1,6 +1,15 @@
 public class RaceEngineer extends Staff {
    
-    public void taak(){
-        System.out.println("RaceEngineer taak");
+    public int gebruik(){
+        return 0;
     };
+
+    public void zetStrategie(Strategie s){
+     
+        
+    };
+
+    
+
+
 }
