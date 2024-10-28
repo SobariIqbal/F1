@@ -1,3 +1,4 @@
+//bedrijf die gereedschap verkoopt
 public class Facom {
     private Fabriek f = null;
     private Momensleutel m = null;

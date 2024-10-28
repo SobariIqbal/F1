@@ -45,11 +45,11 @@ public class F1_CareerMode {
         }
 
         if (team == 1) {
-            player1 = new Mercedes(new Strateeg(null), new Monteur(new DureMomentsleutel(), new DureSlagmoersleutel()), new Coureur(), auto, teamnaam);
+            player1 = new Mercedes(new Strateeg(null), new Monteur(new GoedkopeMomentsleutel(), new DureSlagmoersleutel()), new Coureur(), auto, teamnaam);
         }
 
         if (team == 2) {
-            player1 = new Ferrari(new Strateeg(null), new Monteur(new DureMomentsleutel(), new DureSlagmoersleutel()),  new Coureur(), auto, teamnaam);
+            player1 = new Ferrari(new Strateeg(null), new Monteur(new DureMomentsleutel(), new GoedkopeSlagmoersleutel()),  new Coureur(), auto, teamnaam);
         }
 
         if (team == 3) {
@@ -78,8 +78,8 @@ public class F1_CareerMode {
 
 
     public void tegenstanders() {
-        ferrari = new Ferrari(new Strateeg(null), new Monteur(new DureMomentsleutel(), new DureSlagmoersleutel()), new Coureur(), new W15(new Ferrari_065()), null);
-        mclaren = new Mclaren(new Strateeg(null), new Monteur(new DureMomentsleutel(), new DureSlagmoersleutel()), new Coureur(), new SF_24(new Honda_RA620H()), null);
+        ferrari = new Ferrari(new Strateeg(null), new Monteur(new GoedkopeSlagmoersleutel(), new GoedkopeSlagmoersleutel()), new Coureur(), new W15(new Ferrari_065()), null);
+        mclaren = new Mclaren(new Strateeg(null), new Monteur(new GoedkopeMomentsleutel(), new GoedkopeSlagmoersleutel()), new Coureur(), new SF_24(new Honda_RA620H()), null);
 
         System.out.println("Jouw tegenstanders zijn: ");
         System.out.println("Team "+ ferrari.getTeam() + " met als auto "+ ferrari.auto.getAuto()+ " en met de motor " + ferrari.auto.m.getMotorType());

@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+//hier wordt de algorithme van de race gemaakt en de winnaar berekend
 public class Race {
 
     Random rand = new Random();
