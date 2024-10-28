@@ -4,7 +4,7 @@ public class Facebook extends Communicatiemethode {
         
         
         //hier wordt iets gedaan met bericht
-        return "Bericht is via Whatsapp verstuurd";
+        return "Bericht is via Facebook verstuurd";
     }
  
 

@@ -125,7 +125,7 @@ public class F1_CareerMode {
            
         
                 System.out.println(" ");
-        System.out.println("Kies uit de volgende social media platformen: 1. Twitter 2. Instagram 3. Whatsapp 4. Postduif");	
+        System.out.println("Kies uit de volgende social media platformen: 1. Twitter 2. Instagram 3. Facebook 4. Postduif");	
         
          int nummer = myObj3.nextInt();
 
