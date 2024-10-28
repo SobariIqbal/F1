@@ -1,4 +1,4 @@
 public abstract class Communicatiemethode {
-    public abstract String verstuurBericht(String bericht);
+    protected abstract String verstuurBericht(String bericht);
 
 }

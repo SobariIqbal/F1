@@ -1,34 +1,25 @@
 public class Strateeg{
     protected Strategie s = null;
 
-    public Strateeg(Strategie s){
+    protected Strateeg(Strategie s){
         this.s = s;
     }
 
-    public String getNaam(){
+    protected String getNaam(){
         return "Strateeg";
     }   
 
-    public void zetStrategie(Object s){
-        
-
-        if (s instanceof Strategie) {
-            this.s = (Strategie) s;
-            ((Strategie)s).zetStrategie();
-            
-        } else {
-            throw new IllegalArgumentException("Parameter must be of type Strategie");
-        }
-        
-      
-        
+    protected void zetStrategie(Strategie s){
+            this.s = s;
+            s.zetStrategie();
+       
     }
 
-    public Object gebruik(){
+    protected int gebruik(){
         return s.gebruik();
     }
 
-    public void end(){
+    protected void end(){
         if(s != null){
             s.end();
         }

@@ -1,6 +1,6 @@
 public class DureSlagmoersleutel extends Slagmoresleutel{
-    int prijs = 150;
-    public void gebruik(){
+    private int prijs = 150;
+    protected void gebruik(){
         System.err.println("SnapOn Slagmoersleutel ");
     };
 }

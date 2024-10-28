@@ -51,8 +51,8 @@ public class App {
         
         System.out.println("");
         player1.geselecteerdeKeuzes(naam,teamnaam , auto, motor, team);
-        fac.cheap();
-        fac.expensive();
+        fac.goedkoop();
+        fac.duur();
         System.out.println("");
         player1.maakAuto();
         player1.tegenstanders();

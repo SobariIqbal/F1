@@ -3,26 +3,22 @@ public class Monteur {
     private Gereedschap s;
     
 
-    public Monteur(Gereedschap momentsleutel, Gereedschap slagmoersleutel) {
+    protected Monteur(Gereedschap momentsleutel, Gereedschap slagmoersleutel) {
         m = momentsleutel;
         s = slagmoersleutel;
 
     }
-    public Object gebruik(){
+    protected void gebruikMomemsleutel(){
         m.gebruik();    
-        s.gebruik();
-
-
-        return 0;
+       
     };
 
-    public String getNaam(){
+    protected void gebruikSlagmoersleutel(){
+        s.gebruik();
+    };
+
+    protected String getNaam(){
         return "Monteur";	
     }   
-
-    public void zetStrategie(Object s){
-     
-        
-    };
 
 }

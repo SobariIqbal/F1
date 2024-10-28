@@ -1,4 +1,4 @@
 public abstract class Fabriek {
-    public abstract Slagmoresleutel Slagmoersleutel();
-    public abstract Momensleutel Momensleutel();
+    protected abstract Slagmoresleutel Slagmoersleutel();
+    protected abstract Momensleutel Momensleutel();
 }

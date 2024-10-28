@@ -1,13 +1,13 @@
 public class Overcut extends Strategie{
-    public void zetStrategie(){
+    protected void zetStrategie(){
         System.err.println("Overcut is ingezet..."); 
         
     };
-    public int gebruik(){ 
+    protected int gebruik(){ 
         
         return -25;
     };
-    public void end(){
+    protected void end(){
         System.err.println("Overcut was a success");
     };
 }

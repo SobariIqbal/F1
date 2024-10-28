@@ -1,18 +1,18 @@
 public abstract class Auto{
 
-    protected Motoren m = null;
+    protected Motor m = null;
    
 
-    public Auto(Motoren motor){
+    protected Auto(Motor motor){
    
         this.m = motor;
        
         
     }
 
-    public abstract void snelheid(int km_u);
-    public abstract String getAuto();
-    public abstract String getMotorType();
+    protected abstract void snelheid(int km_u);
+    protected abstract String getAuto();
+    protected abstract String getMotorType();
     
 
 

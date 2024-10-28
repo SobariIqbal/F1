@@ -4,11 +4,11 @@ public class MCL60 extends Auto {
 
     
 
-    public MCL60(Motoren mo) {
+    protected MCL60(Motor mo) {
         super(mo);
     }
     
-    public void snelheid(int km_u) {
+    protected void snelheid(int km_u) {
 
 
         
@@ -26,11 +26,11 @@ public class MCL60 extends Auto {
        
     }
 
-    public String getAuto() {
+    protected String getAuto() {
         return auto;
     }
 
-    public String getMotorType() {
+    protected String getMotorType() {
         return m.getMotorType();
     }
 

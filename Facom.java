@@ -3,13 +3,13 @@ public class Facom {
     private Momensleutel m = null;
     private Slagmoresleutel s = null;
 
-    public void cheap(){
+    protected void goedkoop(){
         f= new TangTools();
         m= f.Momensleutel();
         s= f.Slagmoersleutel();
     }
 
-    public void expensive(){
+    protected void duur(){
         f= new SnapOn();
         m= f.Momensleutel();
         s= f.Slagmoersleutel();

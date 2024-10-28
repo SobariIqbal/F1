@@ -1,6 +1,6 @@
 public abstract class Strategie {
 
-    public abstract void zetStrategie();
-    public abstract int gebruik();
-    public abstract void end();    
+    protected abstract void zetStrategie();
+    protected abstract int gebruik();
+    protected abstract void end();    
 }

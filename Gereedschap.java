@@ -1,5 +1,5 @@
 public abstract class Gereedschap {
 
-    public abstract void gebruik();
+    protected abstract void gebruik();
 
 }

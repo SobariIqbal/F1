@@ -1,6 +1,6 @@
 public class GoedkopeMomentsleutel extends Momensleutel{
     int prijs = 25;
-    public void gebruik(){
+    protected void gebruik(){
         System.out.println("Tangtools Momensleutel");
     };
 }

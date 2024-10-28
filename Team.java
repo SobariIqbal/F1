@@ -10,31 +10,21 @@ public abstract class Team {
     protected String teamname;
 
 
-    public Team(Strateeg strat, Monteur mont, Coureur cour , Auto au, String team){
+    protected Team(Strateeg strat, Monteur mont, Coureur cour , Auto au, String team){
         strateeg = strat;
         monteur = mont;
-        
         coureur = cour;
         teamname = team;
         auto = au;
-        // if(au == 1){
-        //     auto = new MCL60(motor);
-        // }
-        // if(au == 2){
-        //     auto = new W15(motor);
-        // }
-        // if(au == 3){
-        //     auto = new SF_24(motor);
-        // }
-      
-    
     }
 
-    public abstract String getTeam();
+    
+
+    protected abstract String getTeam();
 
     
 
-    public abstract String getTeamname();
+    protected abstract String getTeamname();
 
     
 

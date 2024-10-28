@@ -1,5 +1,5 @@
 public class Postduif extends Communicatiemethode {
-    public String verstuurBericht(String bericht) {
+    protected String verstuurBericht(String bericht) {
         
        
 

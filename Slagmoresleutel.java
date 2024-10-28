@@ -1,3 +1,3 @@
 public abstract class Slagmoresleutel extends Gereedschap {
-    public abstract void gebruik();
+    protected abstract void gebruik();
 }

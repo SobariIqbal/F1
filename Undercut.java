@@ -1,14 +1,14 @@
 public class Undercut extends Strategie{
-    public void zetStrategie(){
+    protected void zetStrategie(){
         System.err.println("Undercut is ingezet...");
         
         
     };
-    public int gebruik(){
+    protected int gebruik(){
         
         return 100;
     };
-    public void end(){
+    protected void end(){
         System.err.println("Undercut was a success");
     };
 }
