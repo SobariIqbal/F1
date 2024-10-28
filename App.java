@@ -29,18 +29,37 @@ public class App {
         Scanner myObj2 = new Scanner(System.in); 
         System.out.println("Voer je teamnaam in: ");
         String teamnaam = myObj2.nextLine(); 
-
+        
         Scanner myObj3 = new Scanner(System.in); 
         System.out.println("kies uit de volgende teams: 1. Mercedes 2. Ferrari 3. Mclaren");
         int team = myObj3.nextInt();
+        if (team == 1 || team == 2 || team == 3){
+            
+        }else{
+            System.out.println("Je kan niet lezen of je kan niet typen");
+            System.exit(0);
+        }
+        
 
         Scanner myObj4 = new Scanner(System.in);
         System.out.println("kies uit de volgende auto's: 1. MC60 2. W15 3. SF_24");
         int auto = myObj4.nextInt();
+        if(auto == 1 || auto == 2 || auto == 3){
+           
+        }else{
+            System.out.println("Je kan niet lezen of je kan niet typen");
+            System.exit(0);
+        }
 
         Scanner myObj5 = new Scanner(System.in);
         System.out.println("kies uit de volgende motoren: 1. Renault_20 2. Ferrari_065 3. Honda_RA620H");
         int motor = myObj5.nextInt();
+        if(motor == 1 || motor == 2 || motor == 3){
+            
+        }else{
+            System.out.println("Je kan niet lezen of je kan niet typen");
+            System.exit(0);
+        }
 
         System.out.println("");
         F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam);

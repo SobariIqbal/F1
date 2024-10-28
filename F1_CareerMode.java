@@ -148,9 +148,11 @@ public class F1_CareerMode {
         System.out.println(player1.coureur.gebruik()); 
                 
 
-            }
-            if (nummer2 == 2){
+            }else if (nummer2 == 2){
                 break;
+            }else {
+                System.out.println("Je kan niet lezen of je kan niet typen");
+                System.out.println(" ");
             }
 
             

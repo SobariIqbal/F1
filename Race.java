@@ -50,8 +50,6 @@ public class Race {
                          
                          
                 
-                
-                           
     
                 }else{
                     System.out.println("kies uit de volgende strategieen: 1. Undercut 2. Overcut 3. One stop strategie");
@@ -59,133 +57,142 @@ public class Race {
                     int nummer = myObj3.nextInt();
                     System.out.println("Strategieen: ");
                     System.out.println(" ");
-                    if (stop == false) {
-                        if (nummer == 1) {
-                            System.out.println(player1.getTeamname()+ " :"); 
-                            player1.strateeg.zetStrategie(new Undercut());
-                            snelheid += (Integer)player1.strateeg.gebruik();
-                            stop = true;
-                            teller = 0;
-                            
-                        }
-                        if (nummer == 2) {
-                            System.out.println(player1.getTeamname()+ " :"); 
-                            player1.strateeg.zetStrategie(new Overcut());
-                            snelheid2 += (Integer)player1.strateeg.gebruik();
-                            snelheid3 += (Integer)player1.strateeg.gebruik();
-                            
-                        }
-                        if (nummer == 3) {
-                            System.out.println(player1.getTeamname()+ " :"); 
-                            player1.strateeg.zetStrategie(new One_stop_strategie());
-                            snelheid += (Integer)player1.strateeg.gebruik();
-                            
-                            
-                        }
-                    }else{
-                        if (teller == 1) {
-                            stop = false;
-                        }
-                    }
-                    
-                    if (stop2 == false) {
-                        if (rand2 == 0) {
-                            System.out.println(ferrari.getTeamname()+ " :");
-                            ferrari.strateeg.zetStrategie(new Undercut());
-                            snelheid2 += (Integer) ferrari.strateeg.gebruik();
-                            stop2 = true;
-                            teller2 = 0;
-                            
-                        }
-                        if (rand2 == 1) {
-                            System.out.println(ferrari.getTeamname()+ " :");
-                            ferrari.strateeg.zetStrategie(new Overcut());
-                            snelheid += (Integer)ferrari.strateeg.gebruik();
-                            snelheid3 += (Integer)ferrari.strateeg.gebruik();
-                            
-                        }
-                        if (rand2 == 2) {
-                            System.out.println(ferrari.getTeamname()+ " :");
-                            ferrari.strateeg.zetStrategie(new One_stop_strategie());
-                            snelheid2 += (Integer)ferrari.strateeg.gebruik();
-                            
-                           
-                        }
-        
-                    }else{
-                        if (teller2 == 1) {
-                            stop2 = false;
-                        }
-                    }
-                    
-                    if (stop3 == false) {
-                        if (rand3 == 0) {
-                            System.out.println(mclaren.getTeamname()+ " :");
-                            mclaren.strateeg.zetStrategie(new Undercut());
-                            snelheid3 += (Integer)mclaren.strateeg.gebruik();
-                            stop3 = true;
-                            teller3 = 0;
-                            
-                        }
-                        if (rand3 == 1) {
-                            System.out.println(mclaren.getTeamname()+ " :");
-                            mclaren.strateeg.zetStrategie(new Overcut());
-                            snelheid += (Integer)mclaren.strateeg.gebruik();
-                            snelheid2 += (Integer)mclaren.strateeg.gebruik();
-                            
-                        }
-                        if (rand3 == 2) {
-                            System.out.println(mclaren.getTeamname()+ " :");
-                            mclaren.strateeg.zetStrategie(new One_stop_strategie());
-                            snelheid3 += (Integer)mclaren.strateeg.gebruik();
-                            
-                            
+                    if (nummer == 1 || nummer == 2 || nummer == 3) {
+                        if (stop == false) {
+                            if (nummer == 1) {
+                                System.out.println(player1.getTeamname()+ " :"); 
+                                player1.strateeg.zetStrategie(new Undercut());
+                                snelheid += (Integer)player1.strateeg.gebruik();
+                                stop = true;
+                                teller = 0;
+                                
+                            }
+                            if (nummer == 2) {
+                                System.out.println(player1.getTeamname()+ " :"); 
+                                player1.strateeg.zetStrategie(new Overcut());
+                                snelheid2 += (Integer)player1.strateeg.gebruik();
+                                snelheid3 += (Integer)player1.strateeg.gebruik();
+                                
+                            }
+                            if (nummer == 3) {
+                                System.out.println(player1.getTeamname()+ " :"); 
+                                player1.strateeg.zetStrategie(new One_stop_strategie());
+                                snelheid += (Integer)player1.strateeg.gebruik();
+                                
+                                
+                            }
+                        }else{
+                            if (teller == 1) {
+                                stop = false;
+                            }
                         }
                         
-                    }else{
-                        if (teller3 == 1) {
-                            stop3 = false;
+                        if (stop2 == false) {
+                            if (rand2 == 0) {
+                                System.out.println(ferrari.getTeamname()+ " :");
+                                ferrari.strateeg.zetStrategie(new Undercut());
+                                snelheid2 += (Integer) ferrari.strateeg.gebruik();
+                                stop2 = true;
+                                teller2 = 0;
+                                
+                            }
+                            if (rand2 == 1) {
+                                System.out.println(ferrari.getTeamname()+ " :");
+                                ferrari.strateeg.zetStrategie(new Overcut());
+                                snelheid += (Integer)ferrari.strateeg.gebruik();
+                                snelheid3 += (Integer)ferrari.strateeg.gebruik();
+                                
+                            }
+                            if (rand2 == 2) {
+                                System.out.println(ferrari.getTeamname()+ " :");
+                                ferrari.strateeg.zetStrategie(new One_stop_strategie());
+                                snelheid2 += (Integer)ferrari.strateeg.gebruik();
+                                
+                               
+                            }
+            
+                        }else{
+                            if (teller2 == 1) {
+                                stop2 = false;
+                            }
                         }
+                        
+                        if (stop3 == false) {
+                            if (rand3 == 0) {
+                                System.out.println(mclaren.getTeamname()+ " :");
+                                mclaren.strateeg.zetStrategie(new Undercut());
+                                snelheid3 += (Integer)mclaren.strateeg.gebruik();
+                                stop3 = true;
+                                teller3 = 0;
+                                
+                            }
+                            if (rand3 == 1) {
+                                System.out.println(mclaren.getTeamname()+ " :");
+                                mclaren.strateeg.zetStrategie(new Overcut());
+                                snelheid += (Integer)mclaren.strateeg.gebruik();
+                                snelheid2 += (Integer)mclaren.strateeg.gebruik();
+                                
+                            }
+                            if (rand3 == 2) {
+                                System.out.println(mclaren.getTeamname()+ " :");
+                                mclaren.strateeg.zetStrategie(new One_stop_strategie());
+                                snelheid3 += (Integer)mclaren.strateeg.gebruik();
+                                
+                                
+                            }
+                            
+                        }else{
+                            if (teller3 == 1) {
+                                stop3 = false;
+                            }
+                        }
+                        
+                       
+                    
+                    System.out.println(" ");
+                    System.out.println("Snelheden: ");
+                    System.out.println(" ");
+                    System.out.println(player1.getTeamname()+ " :");  
+                    player1.auto.snelheid(snelheid);
+                    System.out.println(ferrari.getTeamname()+ " :");
+                    ferrari.auto.snelheid(snelheid2);
+                    System.out.println(mclaren.getTeamname()+ " :");
+                    mclaren.auto.snelheid(snelheid3);
+        
+                    //print de standen uit in 1 printlijn
+                    System.out.println(" ");
+                    System.out.println("Standen: ");
+                    System.out.println(" ");
+                    System.out.println(player1.getTeamname()+ " : " + snelheid + " km/u");
+                    System.out.println(ferrari.getTeamname()+ " : " + snelheid2 + " km/u");
+                    System.out.println(mclaren.getTeamname()+ " : " + snelheid3 + " km/u");
+                    
+        
+                    teller++;
+                    teller2++;
+                    teller3++;
+                           
+                        
+                        
+                    }else{
+                        System.out.println("Je kan niet lezen of je kan niet typen");
+                        lap = lap - 1;
+                        
                     }
                     
-                   
-                }
-                System.out.println(" ");
-                System.out.println("Snelheden: ");
-                System.out.println(" ");
-                System.out.println(player1.getTeamname()+ " :");  
-                player1.auto.snelheid(snelheid);
-                System.out.println(ferrari.getTeamname()+ " :");
-                ferrari.auto.snelheid(snelheid2);
-                System.out.println(mclaren.getTeamname()+ " :");
-                mclaren.auto.snelheid(snelheid3);
-    
-                //print de standen uit in 1 printlijn
-                System.out.println(" ");
-                System.out.println("Standen: ");
-                System.out.println(" ");
-                System.out.println(player1.getTeamname()+ " : " + snelheid + " km/u");
-                System.out.println(ferrari.getTeamname()+ " : " + snelheid2 + " km/u");
-                System.out.println(mclaren.getTeamname()+ " : " + snelheid3 + " km/u");
-                
-    
-                teller++;
-                teller2++;
-                teller3++;
-                       
     
             }
     
-            System.out.println(" ");
-            System.out.println("Einde van de race");
-            System.out.println(" ");
+            
          
     
             
             
         }
-
-        
+            System.out.println(" ");
+            System.out.println("Einde van de race");
+            System.out.println(" ");
+    }
     }
 
     public void winnaarBerekenen(Team player1, Team ferrari, Team mclaren){
