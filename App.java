@@ -17,76 +17,98 @@ public class App {
         //Aan het einde van de race mag je een bericht sturen naar je fans via de volgende platformen: Twitter, Instagram, Facebook en Postduif.
         //Veel plezier met het spelen van het spel!
 
-        System.out.println("F1");
-        System.out.println("");
-        Facom fac = new Facom();
+        while(true){
+            Scanner myObj_ = new Scanner(System.in); 
+            System.out.println("Welkom bij het spel! Wil je beginnen? 1. Ja 2. Nee");
+            int keuze = myObj_.nextInt(); 
+            if(keuze == 1){
+                System.out.println("");
+                System.out.println("F1");
+                System.out.println("");
+                Facom fac = new Facom();
+                
+                System.out.println("");
+                Scanner myObj = new Scanner(System.in); 
+                System.out.println("Voer je naam in: ");
+                String naam = myObj.nextLine(); 
         
-        System.out.println("");
-        Scanner myObj = new Scanner(System.in); 
-        System.out.println("Voer je naam in: ");
-        String naam = myObj.nextLine(); 
+                Scanner myObj2 = new Scanner(System.in); 
+                System.out.println("Voer je teamnaam in: ");
+                String teamnaam = myObj2.nextLine(); 
+                
+                Scanner myObj3 = new Scanner(System.in); 
+                System.out.println("kies uit de volgende teams: 1. Mercedes 2. Ferrari 3. Mclaren");
+                int team = myObj3.nextInt();
+                if (team == 1 || team == 2 || team == 3){
+                    
+                }else{
+                    System.out.println("Je kan niet lezen of je kan niet typen dus je mag niet meedoen");
+                    System.exit(0);
+                }
+                
+        
+                Scanner myObj4 = new Scanner(System.in);
+                System.out.println("kies uit de volgende auto's: 1. MC60 2. W15 3. SF_24");
+                int auto = myObj4.nextInt();
+                if(auto == 1 || auto == 2 || auto == 3){
+                   
+                }else{
+                    System.out.println("Je kan niet lezen of je kan niet typen dus je mag niet meedoen");
+                    System.exit(0);
+                }
+        
+                Scanner myObj5 = new Scanner(System.in);
+                System.out.println("kies uit de volgende motoren: 1. Renault_20 2. Ferrari_065 3. Honda_RA620H");
+                int motor = myObj5.nextInt();
+                if(motor == 1 || motor == 2 || motor == 3){
+                    
+                }else{
+                    System.out.println("Je kan niet lezen of je kan niet typen dus je mag niet meedoen");
+                    System.exit(0);
+                }
+        
+                System.out.println("");
+                F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam);
+        
+               
+        
+                
+                
+                System.out.println("");
+                player1.geselecteerdeKeuzes(auto, motor, team);
+                fac.goedkoop();
+                fac.duur();
+                System.out.println("");
+                player1.maakAuto();
+                player1.tegenstanders();
+                player1.startRace();
+                player1.winnaarBerekenen();
+                player1.verstuurbericht();
+              
+                
+            }else if(keuze == 2){
+                System.out.println("Jammer! tot de volgende keer");
+                break;
+              
+            }else {
+                System.out.println("Je kan niet lezen of je kan niet typen dus je mag opnieuw kiezen");
+                
 
-        Scanner myObj2 = new Scanner(System.in); 
-        System.out.println("Voer je teamnaam in: ");
-        String teamnaam = myObj2.nextLine(); 
-        
-        Scanner myObj3 = new Scanner(System.in); 
-        System.out.println("kies uit de volgende teams: 1. Mercedes 2. Ferrari 3. Mclaren");
-        int team = myObj3.nextInt();
-        if (team == 1 || team == 2 || team == 3){
+                
+            }
             
-        }else{
-            System.out.println("Je kan niet lezen of je kan niet typen");
-            System.exit(0);
-        }
-        
 
-        Scanner myObj4 = new Scanner(System.in);
-        System.out.println("kies uit de volgende auto's: 1. MC60 2. W15 3. SF_24");
-        int auto = myObj4.nextInt();
-        if(auto == 1 || auto == 2 || auto == 3){
-           
-        }else{
-            System.out.println("Je kan niet lezen of je kan niet typen");
-            System.exit(0);
-        }
-
-        Scanner myObj5 = new Scanner(System.in);
-        System.out.println("kies uit de volgende motoren: 1. Renault_20 2. Ferrari_065 3. Honda_RA620H");
-        int motor = myObj5.nextInt();
-        if(motor == 1 || motor == 2 || motor == 3){
             
-        }else{
-            System.out.println("Je kan niet lezen of je kan niet typen");
-            System.exit(0);
+
         }
+     
 
-        System.out.println("");
-        F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam);
-
-       
-
-        
-        
-        System.out.println("");
-        player1.geselecteerdeKeuzes(auto, motor, team);
-        fac.goedkoop();
-        fac.duur();
-        System.out.println("");
-        player1.maakAuto();
-        player1.tegenstanders();
-        player1.startRace();
-        player1.winnaarBerekenen();
-        player1.verstuurbericht();
+ 
 
 
 
 
         
-        myObj.close();
-        myObj2.close();
-        myObj3.close();
-        myObj4.close();
-        myObj5.close();
+      
     }
 }

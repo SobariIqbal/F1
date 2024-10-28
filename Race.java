@@ -18,13 +18,14 @@ public class Race {
 
     protected void start(Team player1, Team ferrari, Team mclaren) {
 
-        
-        Scanner myObj = new Scanner(System.in); 
+        while(true){
+            Scanner myObj = new Scanner(System.in); 
         System.out.println("Druk op 1 om de race te starten");
         int nummer_ = myObj.nextInt();
         System.out.println(" ");
         System.out.println(player1.getTeamname());
-        if (nummer_ == 1) {
+        
+             if (nummer_ == 1) {
             System.out.println("De race start in 3, 2, 1, GO!");
             int teller = 0;
             int teller2 = 0;
@@ -52,7 +53,13 @@ public class Race {
                 
     
                 }else{
-                    System.out.println("kies uit de volgende strategieen: 1. Undercut 2. Overcut 3. One stop strategie");
+                    if (stop == false){
+                        System.out.println("kies uit de volgende strategieen: 1. Undercut 2. Overcut 3. One stop strategie");
+
+                    }else {
+                        System.out.println("Druk op een cijfer om door te gaan");
+                    }
+                    
                     
                     int nummer = myObj3.nextInt();
                     System.out.println("Strategieen: ");
@@ -63,6 +70,7 @@ public class Race {
                                 System.out.println(player1.getTeamname()+ " :"); 
                                 player1.strateeg.zetStrategie(new Undercut());
                                 snelheid += (Integer)player1.strateeg.gebruik();
+                                System.out.println("Je mag 1 lap geen strategie kiezen");
                                 stop = true;
                                 teller = 0;
                                 
@@ -82,6 +90,7 @@ public class Race {
                                 
                             }
                         }else{
+
                             if (teller == 1) {
                                 stop = false;
                             }
@@ -149,7 +158,20 @@ public class Race {
                         
                        
                     
-                    System.out.println(" ");
+                
+                           
+                        
+                        
+                    }else{
+                        System.out.println("Je kan niet lezen of je kan niet typen");
+                        lap = lap - 1;
+                        
+                    }
+                    
+    
+            }
+
+                System.out.println(" ");
                     System.out.println("Snelheden: ");
                     System.out.println(" ");
                     System.out.println(player1.getTeamname()+ " :");  
@@ -171,17 +193,6 @@ public class Race {
                     teller++;
                     teller2++;
                     teller3++;
-                           
-                        
-                        
-                    }else{
-                        System.out.println("Je kan niet lezen of je kan niet typen");
-                        lap = lap - 1;
-                        
-                    }
-                    
-    
-            }
     
             
          
@@ -192,7 +203,17 @@ public class Race {
             System.out.println(" ");
             System.out.println("Einde van de race");
             System.out.println(" ");
-    }
+            break;
+    }else{
+        System.out.println("waarom klik je gewoon niet op 1?");
+      
+        
+    }   
+        
+
+        }
+        
+       
     }
 
     public void winnaarBerekenen(Team player1, Team ferrari, Team mclaren){

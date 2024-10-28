@@ -129,7 +129,8 @@ public class F1_CareerMode {
         System.out.println("Kies uit de volgende social media platformen: 1. Twitter 2. Instagram 3. Facebook 4. Postduif");	
         
          int nummer = myObj3.nextInt();
-
+         if (nummer == 1|| nummer == 2 || nummer == 3 || nummer == 4){
+            
         if(nummer == 1){
             player1.coureur.zetCommunicatiemethode(new Twitter());
         }
@@ -146,6 +147,15 @@ public class F1_CareerMode {
             player1.coureur.zetCommunicatiemethode(new Postduif());
         }
         System.out.println(player1.coureur.gebruik()); 
+            
+
+         }else{
+             System.out.println("Je kan niet lezen of je kan niet typen");
+             
+            }
+
+            
+
                 
 
             }else if (nummer2 == 2){
