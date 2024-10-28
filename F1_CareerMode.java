@@ -7,7 +7,8 @@ public class F1_CareerMode {
     private Team mclaren = null;
     private Team player1 = null;
 
-    protected String naamspeler;
+    protected String naam;
+    protected String teamnaam;
 
     Random rand = new Random();
     
@@ -15,7 +16,7 @@ public class F1_CareerMode {
     protected int snelheid = 200; 
     protected int snelheid2 = 200;
     protected int snelheid3 = 200;
-    protected int snelheid4 = 200;
+    
 
     protected boolean stop = false;
     protected boolean stop2 = false;
@@ -24,33 +25,63 @@ public class F1_CareerMode {
 
   
 
-    public F1_CareerMode(String naam, String teamnaam, int team, int auto, int motor) {
-        naamspeler = naam;
+    public F1_CareerMode(String naam, String teamnaam) {
+        this.teamnaam = naam;
+        this.teamnaam = teamnaam;
+
+  
+        
+    }
+
+    public void geselecteerdeKeuzes(String teamnaam,int autoKeuze,int motorKeuze, int team) {
+        Motoren motor = null;
+        Auto auto = null;
+        if (motorKeuze == 1) {
+            motor = new Renault_20();
+        }
+        if(motorKeuze == 2) {
+            motor = new Ferrari_065();
+        }
+        if (motorKeuze == 3) {
+            motor = new Honda_RA620H();
+        }
+        if (autoKeuze == 1) {
+             auto = new MCL60(motor);
+        }
+        if (autoKeuze == 2) { 
+            auto = new W15(motor);
+        }
+        if (autoKeuze == 3) {
+             auto = new SF_24(motor);
+        }
 
         if (team == 1) {
-            player1 = new Mercedes(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), auto, teamnaam, motor);
+            player1 = new Mercedes(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), auto, teamnaam);
         }
 
         if (team == 2) {
-            player1 = new Ferrari(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), auto, teamnaam, motor);
+            player1 = new Ferrari(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), auto, teamnaam);
         }
 
         if (team == 3) {
-            player1 = new Mclaren(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), auto, teamnaam, motor);
+            player1 = new Mclaren(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), auto, teamnaam);
         }   
 
         
         System.out.println(naam + " heeft gekozen voor team " + player1.getTeam() + " met als auto "+ player1.auto.getAuto()+ " en met de motor " + player1.auto.m.getMotorType()+ " onder de teamnaam " + teamnaam);
         System.out.println(" "); 
-        
+
+
+
+
     }
     
 
 
     public void tegenstanders() {
-        mercedes = new Mercedes(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), 1, null, 1);
-        ferrari = new Ferrari(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), 2, null, 2);
-        mclaren = new Mclaren(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), 3, null, 3);
+        
+        ferrari = new Ferrari(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), new W15(new Ferrari_065()), null);
+        mclaren = new Mclaren(new Strateeg(null), new Monteur(), new RaceEngineer(), new Coureur(), new SF_24(new Honda_RA620H()), null);
     }
 
     
@@ -94,7 +125,7 @@ public class F1_CareerMode {
                     if (nummer == 1) {
                         System.out.println(player1.getTeamname()+ " :"); 
                         player1.strateeg.zetStrategie(new Undercut());
-                        snelheid += player1.strateeg.gebruik();
+                        snelheid += (Integer)player1.strateeg.gebruik();
                         stop = true;
                         teller = 0;
                         
@@ -102,14 +133,14 @@ public class F1_CareerMode {
                     if (nummer == 2) {
                         System.out.println(player1.getTeamname()+ " :"); 
                         player1.strateeg.zetStrategie(new Overcut());
-                        snelheid2 += player1.strateeg.gebruik();
-                        snelheid3 += player1.strateeg.gebruik();
+                        snelheid2 += (Integer)player1.strateeg.gebruik();
+                        snelheid3 += (Integer)player1.strateeg.gebruik();
                         
                     }
                     if (nummer == 3) {
                         System.out.println(player1.getTeamname()+ " :"); 
                         player1.strateeg.zetStrategie(new One_stop_strategie());
-                        snelheid += player1.strateeg.gebruik();
+                        snelheid += (Integer)player1.strateeg.gebruik();
                         
                         
                     }
@@ -123,7 +154,7 @@ public class F1_CareerMode {
                     if (rand2 == 0) {
                         System.out.println(ferrari.getTeamname()+ " :");
                         ferrari.strateeg.zetStrategie(new Undercut());
-                        snelheid2 += ferrari.strateeg.gebruik();
+                        snelheid2 += (Integer) ferrari.strateeg.gebruik();
                         stop2 = true;
                         teller2 = 0;
                         
@@ -131,14 +162,14 @@ public class F1_CareerMode {
                     if (rand2 == 1) {
                         System.out.println(ferrari.getTeamname()+ " :");
                         ferrari.strateeg.zetStrategie(new Overcut());
-                        snelheid += ferrari.strateeg.gebruik();
-                        snelheid3 += ferrari.strateeg.gebruik();
+                        snelheid += (Integer)ferrari.strateeg.gebruik();
+                        snelheid3 += (Integer)ferrari.strateeg.gebruik();
                         
                     }
                     if (rand2 == 2) {
                         System.out.println(ferrari.getTeamname()+ " :");
                         ferrari.strateeg.zetStrategie(new One_stop_strategie());
-                        snelheid2 += ferrari.strateeg.gebruik();
+                        snelheid2 += (Integer)ferrari.strateeg.gebruik();
                         
                        
                     }
@@ -153,7 +184,7 @@ public class F1_CareerMode {
                     if (rand3 == 0) {
                         System.out.println(mclaren.getTeamname()+ " :");
                         mclaren.strateeg.zetStrategie(new Undercut());
-                        snelheid3 += mclaren.strateeg.gebruik();
+                        snelheid3 += (Integer)mclaren.strateeg.gebruik();
                         stop3 = true;
                         teller3 = 0;
                         
@@ -161,14 +192,14 @@ public class F1_CareerMode {
                     if (rand3 == 1) {
                         System.out.println(mclaren.getTeamname()+ " :");
                         mclaren.strateeg.zetStrategie(new Overcut());
-                        snelheid += mclaren.strateeg.gebruik();
-                        snelheid2 += mclaren.strateeg.gebruik();
+                        snelheid += (Integer)mclaren.strateeg.gebruik();
+                        snelheid2 += (Integer)mclaren.strateeg.gebruik();
                         
                     }
                     if (rand3 == 2) {
                         System.out.println(mclaren.getTeamname()+ " :");
                         mclaren.strateeg.zetStrategie(new One_stop_strategie());
-                        snelheid3 += mclaren.strateeg.gebruik();
+                        snelheid3 += (Integer)mclaren.strateeg.gebruik();
                         
                         
                     }
@@ -210,40 +241,50 @@ public class F1_CareerMode {
         System.out.println(" ");
         System.out.println("Einde van de race");
         System.out.println(" ");
-        System.out.println(player1.getTeamname() + " heeft " + snelheid + " aantal punten");
-        System.out.println(ferrari.getTeamname() + " heeft " + snelheid2 + " aantal punten");
-        System.out.println(mclaren.getTeamname() + " heeft " + snelheid3 + " aantal punten");
-        // System.out.println(mercedes.getTeamname() + " heeft " + totaal4 + " aantal punten");
+     
 
 
  
     }
 
     public void winnaarBerekenen(){
+        //als 1 iemand wint
         System.out.println(" ");
-        if (snelheid > snelheid2 && snelheid > snelheid3 && snelheid > snelheid4){
+        if (snelheid > snelheid2 && snelheid > snelheid3){
             System.out.println(player1.getTeamname() + " heeft gewonnen! Hij ging met de snelheid van " + snelheid + " km/u over de finish");
+            
         }
-        if (snelheid2 > snelheid && snelheid2 > snelheid3 && snelheid2 > snelheid4){
+        if (snelheid2 > snelheid && snelheid2 > snelheid3){
             System.out.println(ferrari.getTeamname() + " heeft gewonnen! Hij ging met de snelheid van " + snelheid2 + " km/u over de finish");
+            
         }
-        if (snelheid3 > snelheid && snelheid3 > snelheid2 && snelheid3 > snelheid4){
+        if (snelheid3 > snelheid && snelheid3 > snelheid2){
             System.out.println(mclaren.getTeamname() + " heeft gewonnen! Hij ging met de snelheid van " + snelheid3 + " km/u over de finish");
+           
         }
-        // if (totaal4 > totaal && totaal4 > totaal2 && totaal4 > totaal3){
-        //     System.out.println(mercedes.getTeamname() + " heeft gewonnen!");
-        // }
-
+       
         //bij gelijk spel
-        if (snelheid == snelheid2 && snelheid > snelheid3 && snelheid > snelheid4){
+        if (snelheid == snelheid2 && snelheid > snelheid3){
             System.out.println(player1.getTeamname() + " en " + ferrari.getTeamname() + " hebben gelijk gespeeld! ze gingen beide met een snelheid van " + snelheid + " km/u over de finish");
+            
         }
-        if (snelheid == snelheid3 && snelheid > snelheid2 && snelheid > snelheid4){
+        if (snelheid == snelheid3 && snelheid > snelheid2 ){
             System.out.println(player1.getTeamname() + " en " + mclaren.getTeamname() + " hebben gelijk gespeeld! ze gingen beide met een snelheid van " + snelheid + " km/u over de finish");
+            
         }
-        if (snelheid2 == snelheid3 && snelheid2 > snelheid && snelheid2 > snelheid4){
+        if (snelheid2 == snelheid3 && snelheid2 > snelheid){
             System.out.println(ferrari.getTeamname() + " en " + mclaren.getTeamname() + " hebben gelijk gespeeld! ze gingen beide met een snelheid van " + snelheid2 + " km/u over de finish");
+            
         }
+
+        //bij gelijk spel iedereen
+        if (snelheid == snelheid2 && snelheid == snelheid3){
+            System.out.println(player1.getTeamname() + " en " + ferrari.getTeamname() + " en " + mclaren.getTeamname() + " hebben gelijk gespeeld! ze gingen allemaal met een snelheid van " + snelheid + " km/u over de finish");
+           
+        }
+
+        
+
 
     }
 
@@ -252,8 +293,54 @@ public class F1_CareerMode {
     
 
     public void verstuurbericht() {
+        Scanner myObj4 = new Scanner(System.in); 
+        Scanner myObj3 = new Scanner(System.in); 
 
+        while(true){
+            
+            
+            System.out.println(" ");
+            System.out.println("Wil je een bericht versturen naar je fans? 1. Ja 2. Nee");
+            int nummer2 = myObj4.nextInt();
+            
+            if (nummer2 == 1){
+                
+           
         
+                System.out.println(" ");
+        System.out.println("Kies uit de volgende social media platformen: 1. Twitter 2. Instagram 3. Whatsapp 4. Postduif");	
+        
+         int nummer = myObj3.nextInt();
+
+        if(nummer == 1){
+            player1.coureur.zetStrategie(new Twitter());
+        }
+
+        if(nummer == 2){
+            player1.coureur.zetStrategie(new Instagram());
+        }
+
+        if(nummer == 3){
+            player1.coureur.zetStrategie(new Whatsapp());
+        }
+        
+        if(nummer == 4){
+            player1.coureur.zetStrategie(new Postduif());
+        }
+        System.out.println(player1.coureur.gebruik()); 
+                
+
+            }
+            if (nummer2 == 2){
+                break;
+            }
+
+            
+           
+
+        }
+
+          
     }
 
 

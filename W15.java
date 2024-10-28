@@ -2,7 +2,7 @@ public class W15 extends Auto {
     protected int newkm_u = 0;
     private String auto = "W15";
 
-    public W15(int mo) {
+    public W15(Motoren mo) {
         super(mo);
     }
 

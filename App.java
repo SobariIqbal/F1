@@ -26,10 +26,11 @@ public class App {
         int motor = myObj5.nextInt();
 
         System.out.println("");
-        F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam, team, auto, motor);
+        F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam);
 
-        // F1_CareerMode player1 = new F1_CareerMode(naam, teamnaam,new Mercedes(new Strateeg(), new Monteur(), new RaceEngineer(), new Coureur(), new MCL60(new Honda_RA620H()), teamnaam));
+       
 
+        player1.geselecteerdeKeuzes(teamnaam , auto, motor, team);
         player1.tegenstanders();
         player1.startRace();
         player1.winnaarBerekenen();

@@ -1,7 +1,7 @@
 public class Mclaren extends Team {
 
-    public Mclaren(Staff strateeg, Staff monteur,Staff raceengineer,Staff coureur , int auto, String teamnaam, int motor) { 
-        super(strateeg, monteur,raceengineer,coureur, auto, teamnaam, motor);
+    public Mclaren(Staff strateeg, Staff monteur,Staff raceengineer,Staff coureur , Auto auto, String teamnaam) { 
+        super(strateeg, monteur,raceengineer,coureur, auto, teamnaam);
     }
 
     public String getTeam(){

@@ -4,8 +4,8 @@ public class Mercedes extends Team {
 
 
 
-    public Mercedes(Staff strateeg, Staff monteur,Staff raceengineer,Staff coureur , int auto, String teamnaam, int motor) { 
-        super(strateeg, monteur,raceengineer,coureur, auto, teamnaam, motor);
+    public Mercedes(Staff strateeg, Staff monteur,Staff raceengineer,Staff coureur , Auto auto, String teamnaam) { 
+        super(strateeg, monteur,raceengineer,coureur, auto, teamnaam);
     }
 
     public String getTeam(){

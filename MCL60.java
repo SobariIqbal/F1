@@ -4,7 +4,7 @@ public class MCL60 extends Auto {
 
     
 
-    public MCL60(int mo) {
+    public MCL60(Motoren mo) {
         super(mo);
     }
     

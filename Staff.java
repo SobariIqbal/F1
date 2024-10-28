@@ -3,9 +3,10 @@ public abstract class Staff {
    
 
     // public abstract void gebruik();
-    public abstract int gebruik();
+    public abstract Object gebruik();
 
-    public abstract void zetStrategie(Strategie s);
+    public abstract void zetStrategie(Object s);
+    // public abstract void setCommunicatiemethode(Communicatiemethode c);
         
 
 

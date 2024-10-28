@@ -2,7 +2,7 @@ public class SF_24 extends Auto {
     protected int newkm_u = 0;
     private String auto = "SF_24";
     
-    public SF_24(int mo) {
+    public SF_24(Motoren mo) {
         super(mo);
     }
 

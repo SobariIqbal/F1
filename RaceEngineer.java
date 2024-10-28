@@ -1,10 +1,10 @@
 public class RaceEngineer extends Staff {
    
-    public int gebruik(){
+    public Object gebruik(){
         return 0;
     };
 
-    public void zetStrategie(Strategie s){
+    public void zetStrategie(Object s){
      
         
     };

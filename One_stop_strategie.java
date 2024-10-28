@@ -1,8 +1,10 @@
 public class One_stop_strategie extends Strategie{
-    public void zetStrategie(Strategie s){
+    public void zetStrategie(){
         System.err.println("One_stop_strategie is ingezet...");
+        
     };
     public int gebruik(){
+        
         return 50;
     };
     public void end(){

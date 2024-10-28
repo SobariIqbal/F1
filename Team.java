@@ -11,21 +11,22 @@ public abstract class Team {
     protected String teamname;
 
 
-    public Team(Staff strat, Staff mont,Staff raceeng,Staff cour , int au, String team, int motor){
+    public Team(Staff strat, Staff mont,Staff raceeng,Staff cour , Auto au, String team){
         strateeg = strat;
         monteur = mont;
         raceengineer = raceeng;
         coureur = cour;
         teamname = team;
-        if(au == 1){
-            auto = new MCL60(motor);
-        }
-        if(au == 2){
-            auto = new W15(motor);
-        }
-        if(au == 3){
-            auto = new SF_24(motor);
-        }
+        auto = au;
+        // if(au == 1){
+        //     auto = new MCL60(motor);
+        // }
+        // if(au == 2){
+        //     auto = new W15(motor);
+        // }
+        // if(au == 3){
+        //     auto = new SF_24(motor);
+        // }
       
     
     }

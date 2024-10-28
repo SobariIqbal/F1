@@ -10,16 +10,22 @@ public class Strateeg extends Staff {
         this.s = s;
     }
 
-    public void zetStrategie(Strategie s){
+    public void zetStrategie(Object s){
         
-        this.s = s;
-        if (s != null){
-            s.zetStrategie(s);
-        }    
+
+        if (s instanceof Strategie) {
+            this.s = (Strategie) s;
+            ((Strategie)s).zetStrategie();
+            
+        } else {
+            throw new IllegalArgumentException("Parameter must be of type Strategie");
+        }
+        
+      
         
     }
 
-    public int gebruik(){
+    public Object gebruik(){
         return s.gebruik();
     }
 
