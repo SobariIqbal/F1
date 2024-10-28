@@ -1,3 +1,4 @@
+//Type motor
 public class Ferrari_065 extends Motor {
 
     private String motorType = "Ferrari_065";

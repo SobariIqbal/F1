@@ -1,3 +1,4 @@
+//type motor
 public class Honda_RA620H extends Motor {
     private String motorType = "Honda_RA620H";
     

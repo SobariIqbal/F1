@@ -1,3 +1,4 @@
+//Auto soort
 public class SF_24 extends Auto {
     private int newkm_u = 0;
     private String auto = "SF_24";

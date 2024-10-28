@@ -1,3 +1,4 @@
+//strategie van strateeg
 public class One_stop_strategie extends Strategie{
     protected void zetStrategie(){
         System.err.println("One_stop_strategie is ingezet...");

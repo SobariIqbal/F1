@@ -1,3 +1,4 @@
+//strategie patroon
 import java.util.Scanner;
 public class Coureur {
     private Scanner myObj3 = new Scanner(System.in); 

@@ -1,3 +1,4 @@
+//Strategie van strateeg
 public class Overcut extends Strategie{
     protected void zetStrategie(){
         System.err.println("Overcut is ingezet..."); 

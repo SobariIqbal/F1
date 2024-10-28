@@ -1,3 +1,4 @@
+//een communicatiemethode voor de coureur
 public class Twitter extends Communicatiemethode {
 
     protected String verstuurBericht(String bericht) {

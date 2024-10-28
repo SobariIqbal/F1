@@ -1,3 +1,4 @@
+//fabriek soort
 public class TangTools extends Fabriek{
     protected Slagmoresleutel Slagmoersleutel() {
         System.err.println("TangTools heeft een goedkope Slagmoersleutel geproduceerd");

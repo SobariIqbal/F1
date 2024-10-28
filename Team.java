@@ -1,6 +1,6 @@
 public abstract class Team {
 
-
+   //aggregaties
     protected Strateeg strateeg = null;
     protected Monteur monteur = null;
     protected Coureur coureur = null;

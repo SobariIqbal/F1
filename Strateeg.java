@@ -1,3 +1,4 @@
+//Strategy patroon
 public class Strateeg{
     protected Strategie s = null;
 

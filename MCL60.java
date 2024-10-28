@@ -1,3 +1,4 @@
+//Autosoort
 public class MCL60 extends Auto {
     protected int newkm_u = 0;
     private String auto = "MCL60";

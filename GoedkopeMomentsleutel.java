@@ -1,3 +1,4 @@
+//soort Momensleutel
 public class GoedkopeMomentsleutel extends Momensleutel{
     
     protected void gebruik(){

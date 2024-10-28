@@ -1,6 +1,7 @@
 import java.util.Scanner;
-public class F1_CareerMode {
 
+public class F1_CareerMode {
+    //aggregraties
     private Team ferrari = null;
     private Team mclaren = null;
     private Team player1 = null;

@@ -1,3 +1,4 @@
+//Soort Team
 public class Mclaren extends Team {
 
     protected Mclaren(Strateeg strateeg, Monteur monteur,Coureur coureur , Auto auto, String teamnaam) { 

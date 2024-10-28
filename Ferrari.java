@@ -1,3 +1,4 @@
+//Soort team
 public class Ferrari extends Team{
 
     protected Ferrari(Strateeg strateeg, Monteur monteur,Coureur coureur , Auto auto, String teamnaam) { 

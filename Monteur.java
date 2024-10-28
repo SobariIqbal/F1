@@ -1,4 +1,5 @@
 public class Monteur {
+    //gebruik van de abstracte klasse Gereedschap
     private Gereedschap m;
     private Gereedschap s;
     

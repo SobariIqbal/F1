@@ -1,3 +1,4 @@
+//Bridge patroon
 public abstract class Auto{
 
     protected Motor m = null;
