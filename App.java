@@ -50,7 +50,7 @@ public class App {
         
         
         System.out.println("");
-        player1.geselecteerdeKeuzes(naam,teamnaam , auto, motor, team);
+        player1.geselecteerdeKeuzes(auto, motor, team);
         fac.goedkoop();
         fac.duur();
         System.out.println("");

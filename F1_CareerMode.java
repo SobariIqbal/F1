@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 public class F1_CareerMode {
 
@@ -10,22 +9,19 @@ public class F1_CareerMode {
     private String naam;
     private String teamnaam;
 
-    
-    
-   
-    
-
-  
-
     public F1_CareerMode(String naam, String teamnaam) {
-        this.teamnaam = naam;
+        this.naam = naam;
         this.teamnaam = teamnaam;
-
-  
-        
+    }
+    public String getNaam(){
+        return naam;
     }
 
-    public void geselecteerdeKeuzes(String naam, String teamnaam,int autoKeuze,int motorKeuze, int team) {
+    public String getTeamnaam(){
+        return teamnaam;
+    }
+
+    public void geselecteerdeKeuzes(int autoKeuze,int motorKeuze, int team) {
         Motor motor = null;
         Auto auto = null;
         if (motorKeuze == 1) {
