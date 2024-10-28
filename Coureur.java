@@ -1,9 +1,10 @@
 import java.util.Scanner;
-public class Coureur extends Staff {
+public class Coureur {
     protected Scanner myObj3 = new Scanner(System.in); 
 
     private Communicatiemethode comm = null;
 
+   
     public Object gebruik(){
         System.out.println("Schrijf een bericht: ");
         String bericht = myObj3.nextLine();
@@ -12,13 +13,9 @@ public class Coureur extends Staff {
         return comm.verstuurBericht(bericht);
     };
 
-    public void zetStrategie(Object comm){
-
-        if (comm instanceof Communicatiemethode) {
+    public void zetCommunicatiemethode(Communicatiemethode comm){
             this.comm = (Communicatiemethode) comm;
-        } else {
-            throw new IllegalArgumentException("Parameter must be of type Communicatiemethode");
-        }
+    
     };
 
 }

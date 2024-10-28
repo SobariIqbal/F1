@@ -1,14 +1,13 @@
-public class Strateeg extends Staff {
+public class Strateeg{
     protected Strategie s = null;
-
-   
-    // public String getStrat() {
-    //     return getStrat();
-    // }
 
     public Strateeg(Strategie s){
         this.s = s;
     }
+
+    public String getNaam(){
+        return "Strateeg";
+    }   
 
     public void zetStrategie(Object s){
         

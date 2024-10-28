@@ -1,20 +1,19 @@
 public abstract class Team {
 
 
-    protected Staff strateeg = null;
-    protected Staff monteur = null;
-    protected Staff raceengineer = null;
-    protected Staff coureur = null;
+    protected Strateeg strateeg = null;
+    protected Monteur monteur = null;
+    protected Coureur coureur = null;
     protected Auto auto = null;
     
 
     protected String teamname;
 
 
-    public Team(Staff strat, Staff mont,Staff raceeng,Staff cour , Auto au, String team){
+    public Team(Strateeg strat, Monteur mont, Coureur cour , Auto au, String team){
         strateeg = strat;
         monteur = mont;
-        raceengineer = raceeng;
+        
         coureur = cour;
         teamname = team;
         auto = au;

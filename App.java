@@ -3,7 +3,24 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+        //uitleg van het spel
+        //Je begint eerste met het kiezen van je team. Je hebt keuze uit 3 teams: Mercedes, Ferrari en Mclaren. 
+        //Vervolgens kies je een auto. Daarbij heb je keuze uit 3 auto's: MC60, W15 en SF_24.
+        //Als laatste kies je een motor. Daarbij heb je keuze uit 3 motoren: Renault_20, Ferrari_065 en Honda_RA620H.
+        //Vervolgens wordt de auto gemaakt en krijg je een lijst met tegenstanders.
+        //Het spel werkt als volgt: elke auto begint met de snelheid 200 km/h.
+        //Elke lap heeft elke auto de keuze om een strategie te kiezen behalve de eerste lap. Je hebt keuze uit 3 strategieën:
+        //1. Undercut: Je krijgt +100 km/h snelheid. Maar mag je 1 lap geen strategie kiezen.
+        //2. Overcut: De tegenstanders krijgen -25 km/h snelheid.
+        //3. One stop strategie: Je krijgt +50 km/h snelheid.
+        //De auto die met de hoogste snelheid over de finish komt rijdt heeft gewonnen.
+        //Aan het einde van de race mag je een bericht sturen naar je fans via de volgende platformen: Twitter, Instagram, Facebook en Postduif.
+        //Veel plezier met het spelen van het spel!
+
         System.out.println("F1");
+        System.out.println("");
+        Facom fac = new Facom();
+        
         System.out.println("");
         Scanner myObj = new Scanner(System.in); 
         System.out.println("Voer je naam in: ");
@@ -30,7 +47,14 @@ public class App {
 
        
 
-        player1.geselecteerdeKeuzes(teamnaam , auto, motor, team);
+        
+        
+        System.out.println("");
+        player1.geselecteerdeKeuzes(naam,teamnaam , auto, motor, team);
+        fac.cheap();
+        fac.expensive();
+        System.out.println("");
+        player1.maakAuto();
         player1.tegenstanders();
         player1.startRace();
         player1.winnaarBerekenen();

@@ -1,4 +1,4 @@
-public class RaceEngineer extends Staff {
+public class RaceEngineer{
    
     public Object gebruik(){
         return 0;
@@ -8,6 +8,10 @@ public class RaceEngineer extends Staff {
      
         
     };
+
+    public String getNaam(){
+        return "RaceEngineer";
+    }
 
     
 
