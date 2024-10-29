@@ -86,7 +86,7 @@ public class F1_CareerMode {
     
 
     public void maakAuto(){
-        System.out.println(player1.monteur.getNaam() + " heeft de volgende gereedschappen gebruikt om de auto te maken: ");
+        System.out.println(player1.monteur.getNaam() + " heeft de volgende gereedschappen gebruikt om de banden monteren: ");
         player1.monteur.gebruikMomemsleutel();
         player1.monteur.gebruikSlagmoersleutel();
         System.out.println(" ");
