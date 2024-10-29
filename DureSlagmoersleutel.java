@@ -1,7 +1,7 @@
 //soort Slagmoersleutel
-public class DureSlagmoersleutel extends Slagmoresleutel{
+public class DureSlagmoersleutel extends Slagmoersleutel{
     
-    protected void gebruik(){
+    public void gebruik(){
         System.err.println("SnapOn Slagmoersleutel ");
     };
 }

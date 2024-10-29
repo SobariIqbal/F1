@@ -1,7 +1,7 @@
 //een communicatiemethode voor de coureur
 public class Twitter extends Communicatiemethode {
 
-    protected String verstuurBericht(String bericht) {
+    public String verstuurBericht(String bericht) {
         
         //hier wordt iets gedaan met bericht
         return "Bericht is via Twitter verstuurd";

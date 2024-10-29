@@ -33,7 +33,7 @@ public class Race {
             
            
     
-            for (int lap = 1; lap < 11; lap++) {
+            for (int lap = 1; lap <= 10; lap++) {
                 Scanner myObj3 = new Scanner(System.in); 
                
                 System.out.println(" ");
@@ -157,10 +157,6 @@ public class Race {
                         }
                         
                        
-                    
-                
-                           
-                        
                         
                     }else{
                         System.out.println("Je kan niet lezen of je kan niet typen");

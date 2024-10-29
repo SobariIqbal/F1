@@ -1,20 +1,20 @@
 //strategie patroon
 import java.util.Scanner;
 public class Coureur {
-    private Scanner myObj3 = new Scanner(System.in); 
+    private Scanner myObj = new Scanner(System.in); 
 
     private Communicatiemethode comm = null;
 
    
-    protected String gebruik(){
+    public String gebruik(){
         System.out.println("Schrijf een bericht: ");
-        String bericht = myObj3.nextLine();
+        String bericht = myObj.nextLine();
         
 
         return comm.verstuurBericht(bericht);
     };
 
-    protected void zetCommunicatiemethode(Communicatiemethode comm){
+    public void zetCommunicatiemethode(Communicatiemethode comm){
             this.comm = comm;
     
     };

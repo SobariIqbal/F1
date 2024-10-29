@@ -8,7 +8,7 @@ public class One_stop_strategie extends Strategie{
         
         return 50;
     };
-    protected void end(){
+    protected void eindig(){
         System.err.println("One_stop_strategie will work hopefully");
     };
 }

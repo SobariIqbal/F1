@@ -1,20 +1,21 @@
 //Soort Team
 public class Mclaren extends Team {
+    private String teamnaam = "Mclaren";
 
     protected Mclaren(Strateeg strateeg, Monteur monteur,Coureur coureur , Auto auto, String teamnaam) { 
         super(strateeg, monteur,coureur, auto, teamnaam);
     }
 
     protected String getTeam(){
-        return "Mclaren";
+        return teamnaam;
     }
 
    
 
     protected String getTeamname(){
-        if (teamname == null){
-            return "Mclaren";
+        if (eigenteamnaam == null){
+            return teamnaam;
         }
-        return teamname;
+        return eigenteamnaam;
     }
 }

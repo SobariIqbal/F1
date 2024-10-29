@@ -1,15 +1,15 @@
 //Autosoort
 public class MCL60 extends Auto {
-    protected int newkm_u = 0;
+    private int newkm_u = 0;
     private String auto = "MCL60";
 
     
 
-    protected MCL60(Motor mo) {
+    public MCL60(Motor mo) {
         super(mo);
     }
     
-    protected void snelheid(int km_u) {
+    public void snelheid(int km_u) {
 
 
         
@@ -27,11 +27,11 @@ public class MCL60 extends Auto {
        
     }
 
-    protected String getAuto() {
+    public String getAuto() {
         return auto;
     }
 
-    protected String getMotorType() {
+    public String getMotorType() {
         return m.getMotorType();
     }
 

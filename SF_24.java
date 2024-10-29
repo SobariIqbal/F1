@@ -3,11 +3,11 @@ public class SF_24 extends Auto {
     private int newkm_u = 0;
     private String auto = "SF_24";
     
-    protected SF_24(Motor mo) {
+    public SF_24(Motor mo) {
         super(mo);
     }
 
-    protected void snelheid(int km_u) {
+    public void snelheid(int km_u) {
         
         if(km_u > newkm_u){
             int verschil = km_u - newkm_u;
@@ -23,11 +23,11 @@ public class SF_24 extends Auto {
        
     }
 
-    protected String getAuto() {
+    public String getAuto() {
         return auto;
     }
 
-    protected String getMotorType() {
+    public String getMotorType() {
         return m.getMotorType();
     }
 

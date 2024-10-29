@@ -1,7 +1,7 @@
 //soort Slagmoersleutel
-public class GoedkopeSlagmoersleutel extends Slagmoresleutel{
+public class GoedkopeSlagmoersleutel extends Slagmoersleutel{
   
-    protected void gebruik(){
+    public void gebruik(){
         System.err.println("TangTools Slagmoersleutel ");
     };
 }

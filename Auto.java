@@ -11,9 +11,9 @@ public abstract class Auto{
         
     }
 
-    protected abstract void snelheid(int km_u);
-    protected abstract String getAuto();
-    protected abstract String getMotorType();
+    public abstract void snelheid(int km_u);
+    public abstract String getAuto();
+    public abstract String getMotorType();
     
 
 

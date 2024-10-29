@@ -7,14 +7,14 @@ public abstract class Team {
     protected Auto auto = null;
     
 
-    protected String teamname;
+    protected String eigenteamnaam;
 
 
     protected Team(Strateeg strat, Monteur mont, Coureur cour , Auto au, String team){
         strateeg = strat;
         monteur = mont;
         coureur = cour;
-        teamname = team;
+        eigenteamnaam = team;
         auto = au;
     }
 

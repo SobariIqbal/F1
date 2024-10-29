@@ -1,28 +1,28 @@
 //Strategy patroon
 public class Strateeg{
-    protected Strategie s = null;
+    private Strategie s = null;
 
-    protected Strateeg(Strategie s){
+    public Strateeg(Strategie s){
         this.s = s;
     }
 
-    protected String getNaam(){
+    public String getNaam(){
         return "Strateeg";
     }   
 
-    protected void zetStrategie(Strategie s){
+    public void zetStrategie(Strategie s){
             this.s = s;
             s.zetStrategie();
        
     }
 
-    protected int gebruik(){
+    public int gebruik(){
         return s.gebruik();
     }
 
-    protected void end(){
+    public void eindig(){
         if(s != null){
-            s.end();
+            s.eindig();
         }
     }
 

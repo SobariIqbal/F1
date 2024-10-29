@@ -22,48 +22,68 @@ public class F1_CareerMode {
         return teamnaam;
     }
 
-    public void geselecteerdeKeuzes(int autoKeuze,int motorKeuze, int team) {
-        Motor motor = null;
-        Auto auto = null;
-        if (motorKeuze == 1) {
-            motor = new Renault_20();
-        }
-        if(motorKeuze == 2) {
-            motor = new Ferrari_065();
-        }
-        if (motorKeuze == 3) {
-            motor = new Honda_RA620H();
-        }
-        if (autoKeuze == 1) {
-             auto = new MCL60(motor);
-        }
-        if (autoKeuze == 2) { 
-            auto = new W15(motor);
-        }
-        if (autoKeuze == 3) {
-             auto = new SF_24(motor);
-        }
-
-        if (team == 1) {
-            player1 = new Mercedes(new Strateeg(null), new Monteur(new GoedkopeMomentsleutel(), new DureSlagmoersleutel()), new Coureur(), auto, teamnaam);
-        }
-
-        if (team == 2) {
-            player1 = new Ferrari(new Strateeg(null), new Monteur(new DureMomentsleutel(), new GoedkopeSlagmoersleutel()),  new Coureur(), auto, teamnaam);
-        }
-
-        if (team == 3) {
-            player1 = new Mclaren(new Strateeg(null), new Monteur(new DureMomentsleutel(), new DureSlagmoersleutel()), new Coureur(), auto, teamnaam);
-        }   
-
+    public void geselecteerdeKeuzes(int autoKeuze, int motorKeuze, int team) {
+        Motor motor;
+        Auto auto;
         
-        System.out.println(naam + " heeft gekozen voor team " + player1.getTeam() + " met als auto "+ player1.auto.getAuto()+ " en met de motor " + player1.auto.m.getMotorType()+ " onder de teamnaam " + teamnaam);
+        switch (motorKeuze) {
+            case 1 -> motor = new Renault_20();
+            case 2 -> motor = new Ferrari_065();
+            case 3 -> motor = new Honda_RA620H();
+            default -> {
+                System.out.println("Ongeldige motor keuze.");
+                return;
+            }
+        }
+        
+       
+        switch (autoKeuze) {
+            case 1 -> auto = new MCL60(motor);
+            case 2 -> auto = new W15(motor);
+            case 3 -> auto = new SF_24(motor);
+            default -> {
+                System.out.println("Ongeldige auto keuze.");
+                return;
+            }
+        }
+    
+ 
+        switch (team) {
+            case 1 -> player1 = new Mercedes(
+                new Strateeg(null), 
+                new Monteur(new GoedkopeMomentsleutel(), new DureSlagmoersleutel()), 
+                new Coureur(), 
+                auto, 
+                teamnaam
+            );
+            case 2 -> player1 = new Ferrari(
+                new Strateeg(null), 
+                new Monteur(new DureMomentsleutel(), new GoedkopeSlagmoersleutel()),  
+                new Coureur(), 
+                auto, 
+                teamnaam
+            );
+            case 3 -> player1 = new Mclaren(
+                new Strateeg(null), 
+                new Monteur(new DureMomentsleutel(), new DureSlagmoersleutel()), 
+                new Coureur(), 
+                auto, 
+                teamnaam
+            );
+            default -> {
+                System.out.println("Ongeldige team keuze.");
+                return;
+            }
+        }
+    
+      
+        System.out.println(naam + " heeft gekozen voor team " + player1.getTeam() + 
+            " met als auto " + player1.auto.getAuto() + 
+            " en met de motor " + player1.auto.m.getMotorType() + 
+            " onder de teamnaam " + teamnaam);
         System.out.println(" "); 
-
-
-
-
     }
+    
 
     public void maakAuto(){
         System.out.println(player1.monteur.getNaam() + " heeft de volgende gereedschappen gebruikt om de auto te maken: ");
@@ -91,86 +111,48 @@ public class F1_CareerMode {
     
 
     public void startRace() {
-
         race.start(player1, ferrari, mclaren);
-
-        
-
-    }
-
-    public void winnaarBerekenen(){
         race.winnaarBerekenen(player1, ferrari, mclaren);
-
-        
-
-
     }
 
-        
 
+  
+
+    public void verstuurBericht() {
+        Scanner scanner = new Scanner(System.in);
     
-
-    public void verstuurbericht() {
-        Scanner myObj4 = new Scanner(System.in); 
-        Scanner myObj3 = new Scanner(System.in); 
-
-        while(true){
-            
-            
-            System.out.println(" ");
-            System.out.println("Wil je een bericht versturen naar je fans? 1. Ja 2. Nee");
-            int nummer2 = myObj4.nextInt();
-            
-            if (nummer2 == 1){
-                
-           
-        
-                System.out.println(" ");
-        System.out.println("Kies uit de volgende social media platformen: 1. Twitter 2. Instagram 3. Facebook 4. Postduif");	
-        
-         int nummer = myObj3.nextInt();
-         if (nummer == 1|| nummer == 2 || nummer == 3 || nummer == 4){
-            
-        if(nummer == 1){
-            player1.coureur.zetCommunicatiemethode(new Twitter());
-        }
-
-        if(nummer == 2){
-            player1.coureur.zetCommunicatiemethode(new Instagram());
-        }
-
-        if(nummer == 3){
-            player1.coureur.zetCommunicatiemethode(new Facebook());
-        }
-        
-        if(nummer == 4){
-            player1.coureur.zetCommunicatiemethode(new Postduif());
-        }
-        System.out.println(player1.coureur.gebruik()); 
-            
-
-         }else{
-             System.out.println("Je kan niet lezen of je kan niet typen");
-             
+        while (true) {
+            System.out.println("\nWil je een bericht versturen naar je fans? 1. Ja 2. Nee");
+            int keuzeVersturen = scanner.nextInt();
+    
+            if (keuzeVersturen == 1) {
+                System.out.println("\nKies uit de volgende social media platformen: 1. Twitter 2. Instagram 3. Facebook 4. Postduif");
+                int keuzePlatform = scanner.nextInt();
+    
+                switch (keuzePlatform) {
+                    case 1 -> {
+                        player1.coureur.zetCommunicatiemethode(new Twitter());
+                    }
+                    case 2 -> {
+                        player1.coureur.zetCommunicatiemethode(new Instagram());
+                    }
+                    case 3 -> {
+                        player1.coureur.zetCommunicatiemethode(new Facebook());
+                    }
+                    case 4 -> {
+                        player1.coureur.zetCommunicatiemethode(new Postduif());
+                    }
+                    default -> System.out.println("Ongeldige keuze, probeer het opnieuw.");
+                }
+    
+                System.out.println(player1.coureur.gebruik());  
+    
+            } else if (keuzeVersturen == 2) {
+                break;  
+            } else {
+                System.out.println("Ongeldige keuze, probeer het opnieuw.");
             }
-
-            
-
-                
-
-            }else if (nummer2 == 2){
-                break;
-            }else {
-                System.out.println("Je kan niet lezen of je kan niet typen");
-                System.out.println(" ");
-            }
-
-            
-           
-
         }
-
-          
     }
 
 

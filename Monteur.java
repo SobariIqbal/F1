@@ -1,24 +1,24 @@
 public class Monteur {
     //gebruik van de abstracte klasse Gereedschap
-    private Gereedschap m;
-    private Gereedschap s;
+    private Gereedschap momentsleutel;
+    private Gereedschap slagmoersleutel;
     
 
-    protected Monteur(Gereedschap momentsleutel, Gereedschap slagmoersleutel) {
-        m = momentsleutel;
-        s = slagmoersleutel;
+    public Monteur(Gereedschap momentsleutel, Gereedschap slagmoersleutel) {
+        this.momentsleutel = momentsleutel;
+        this.slagmoersleutel = slagmoersleutel;
 
     }
-    protected void gebruikMomemsleutel(){
-        m.gebruik();    
+    public void gebruikMomemsleutel(){
+        momentsleutel.gebruik();    
        
     };
 
-    protected void gebruikSlagmoersleutel(){
-        s.gebruik();
+    public void gebruikSlagmoersleutel(){
+        slagmoersleutel.gebruik();
     };
 
-    protected String getNaam(){
+    public String getNaam(){
         return "Monteur";	
     }   
 

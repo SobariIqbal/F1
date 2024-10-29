@@ -9,7 +9,7 @@ public class Undercut extends Strategie{
         
         return 100;
     };
-    protected void end(){
+    protected void eindig(){
         System.err.println("Undercut was a success");
     };
 }

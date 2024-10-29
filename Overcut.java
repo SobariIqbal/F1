@@ -8,7 +8,7 @@ public class Overcut extends Strategie{
         
         return -25;
     };
-    protected void end(){
+    protected void eindig(){
         System.err.println("Overcut was a success");
     };
 }

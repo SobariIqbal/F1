@@ -1,7 +1,7 @@
 //soort Momensleutel
 public class GoedkopeMomentsleutel extends Momensleutel{
     
-    protected void gebruik(){
+    public void gebruik(){
         System.out.println("Tangtools Momensleutel");
     };
 }

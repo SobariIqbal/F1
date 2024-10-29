@@ -2,13 +2,13 @@
 public class Honda_RA620H extends Motor {
     private String motorType = "Honda_RA620H";
     
-    protected void versnellen(String auto, int km_u, int verschil) {
+    public void versnellen(String auto, int km_u, int verschil) {
 
         System.out.println("De " + auto + " Met de motor "+ motorType + " versnelt met " + verschil);
         System.out.println("De snelheid van de auto " + auto + " is nu " + km_u + " km/u");
     }
 
-    protected void vertragen(String auto, int km_u, int verschil) {
+    public void vertragen(String auto, int km_u, int verschil) {
 
         System.out.println("De " + auto + " Met de motor "+ motorType + " vertraagt met " + verschil);
         System.out.println("De snelheid van de auto " + auto + " is nu " + km_u + " km/u");
@@ -16,7 +16,7 @@ public class Honda_RA620H extends Motor {
 
 
 
-    protected String getMotorType() {
+    public String getMotorType() {
         return motorType;
     }
 

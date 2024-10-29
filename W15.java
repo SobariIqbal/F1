@@ -1,6 +1,6 @@
 //Auto soort
 public class W15 extends Auto {
-    protected int newkm_u = 0;
+    private int newkm_u = 0;
     private String auto = "W15";
 
     public W15(Motor mo) {
