@@ -1,7 +1,7 @@
 //Strategie van strateeg
 public class Undercut extends Strategie{
     protected void zetStrategie(){
-        System.err.println("Undercut is ingezet...");
+        System.err.println("Undercut is ingezet... +100 km/u");
         
         
     };

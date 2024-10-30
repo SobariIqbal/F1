@@ -8,10 +8,15 @@ public class Menu {
         System.out.println("Welkom bij het spel! Hier zijn de spelregels:");
         System.out.println("Je begint eerste met het kiezen van je team. Je hebt keuze uit 3 teams: Mercedes, Ferrari en Mclaren.");
         System.out.println("Vervolgens kies je een auto: MC60, W15 of SF_24, en daarna een motor: Renault_20, Ferrari_065 of Honda_RA620H.");
-        System.out.println("Elke auto begint met de snelheid van 200 km/h. De race bestaat uit 10 laps, en je kunt strategieën kiezen om je snelheid te veranderen.");
+        System.out.println("Elke auto begint met de snelheid van 200 km/h. De race bestaat uit 10 laps.");
+        System.out.println("Elke lap mag je kiezen uit een strategie kiezen. Undercut, Overcut of one stop strategie");
+        System.out.println("Undercut: je krijgt +100 km/u, maar je mag een lap geen strategie kiezen.");
+        System.out.println("Overcut: tegenstanders krijgen allemaal -30 km/u snelheid.");
+        System.out.println("One stop strategie: je krijgt +50 km/u.");
         System.out.println("De auto met de hoogste snelheid aan het eind wint de race!");
         System.out.println("Aan het einde van de race mag je een bericht sturen naar je fans via Twitter, Instagram, Facebook of Postduif.");
         System.out.println("Veel plezier met het spelen van het spel!\n");
+
 
         while (true) {
             System.out.println("Wil je beginnen? 1. Ja 2. Nee");
