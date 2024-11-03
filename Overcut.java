@@ -1,7 +1,7 @@
 //Strategie van strateeg
 public class Overcut extends Strategie{
     protected void zetStrategie(){
-        System.err.println("Overcut is ingezet... tegenstanders krijgen -30"); 
+        System.err.println("Overcut is ingezet... tegenstanders krijgen -30 km/u"); 
         
     };
     protected int gebruik(){ 
